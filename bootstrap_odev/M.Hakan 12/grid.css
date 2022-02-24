@@ -1,0 +1,86 @@
+
+body{
+    background-image: url("https://as2.ftcdn.net/v2/jpg/03/20/94/79/1000_F_320947939_JjWkmhJaJdEsLiRzxaEHPeAlaCnjpbNz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#aboneOl{
+    width: 200px;;
+}
+.d-flex justify-content-between py-4 my-4 border-top{
+    display: inline-block;
+}
+
+#caroselList{
+    
+    margin-top: 40px;
+    box-sizing:border-box;
+
+
+}
+.hacıklama{
+    font-size: 50px;
+
+}
+.acıklama{
+    font-size: 20px;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSluxqbgXmDyaNuzaVKSX7bArrz5JA5Rmz35q7ABejLcIbP0vkV8VVTnAqo6l79oWiW1r0&usqp=CAU") ;
+    text-align: center !important;
+ 
+   
+}
+#list1{
+    
+    z-index: 2;
+    color: #fff;
+    background-color: #ab9ef1;
+    border-color: #0d6efd;
+
+}
+#list2{
+    
+    z-index: 2;
+    color: #fff;
+    background-color: #7d6dd6;
+    border-color: #0d6efd;
+
+}
+#list3{
+    
+    z-index: 2;
+    color: #fff;
+    background-color: #4636a0;
+    border-color: #0d6efd;
+
+}
+.list-group{
+    margin-top:22px;
+    
+}
+
+#cardsTable {
+    margin-top: 40px;
+}
+
+#footer{
+
+    background-color: rgb(203, 183, 221);
+    margin-top:40px;
+}
+#newsletter1{
+    width: 250px;
+}
+
+@media only screen and (max-width:900px){
+    body {
+        background-color:yellow;
+
+    }
+}
+
+
+
+

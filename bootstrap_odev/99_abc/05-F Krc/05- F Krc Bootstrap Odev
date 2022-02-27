@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 F Krc Ödev</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Matematikçi</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quiz</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dersler
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Matematik</a></li>
+                      <li><a class="dropdown-item" href="#">Geometri</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Ders Notları</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Arama" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Arama</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+         </div>   
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://cdn.pixabay.com/photo/2015/11/05/08/21/geometry-1023846_960_720.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/07/06/15/29/math-1500720_960_720.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2021/04/10/21/03/yellow-6168124_960_720.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+          <div class="col-1">
+          </div>
+          <div class="col-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                  Matematik Konuları
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Limit - Süreklilik</a>
+                <a href="#" class="list-group-item list-group-item-action">Türev</a>
+                <a href="#" class="list-group-item list-group-item-action">İntegral</a>
+                <a class="list-group-item list-group-item-action disabled">Trigonometri</a>
+              </div>
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                  Geometri Konuları
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Üçgende Açılar</a>
+                <a href="#" class="list-group-item list-group-item-action">Açı - Kenar Bağıntıları</a>
+                <a href="#" class="list-group-item list-group-item-action">Kare Dikdörtgen Paralelkenar</a>
+                <a class="list-group-item list-group-item-action disabled">Alan ve Hacim Hesapları</a>
+              </div>
+          </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">E-mail Adresi</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">Mail adresiniz bizde SAKLIDIR.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Şifre</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Doğrulayınız</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Giriş</button>
+                  </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2">
+                <div class="card" style="width: 14rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Haftanın Konuğu:</h5>
+                      <p class="card-text"><b>Gottfried Wilhelm Leibniz</b> (1 Temmuz 1646, Leipzig  14 Kasım 1716, Hannover), Alman matematikçi, filozof, hukukçu ve dönemin idarecilerine danışmanlık yapmış bir münevver. Matematik tarihi ve felsefe tarihinde önemli bir yer tutar. (Wikipedia)</p>
+                      <a href="https://tr.wikipedia.org/wiki/Gottfried_Leibniz" class="btn btn-primary">Siteye Git</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2">
+                <div class="card" style="width: 14rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Pi-unrolled-720.gif/220px-Pi-unrolled-720.gif" class="card-img-top" alt="pi sayısı">
+                    <div class="card-body">
+                      <p class="card-text"><b>Pi sayısı</b> (π=3,14159 26535 89793 23846 26433...), bir dairenin çevresinin çapına bölümü ile elde edilen irrasyonel matematik sabitidir. İsmini, Yunanca περίμετρον (çevre) sözcüğünün ilk harfi olan π harfinden alır. Pi sayısı, Arşimet sabiti ve Ludolph sayısı olarak da bilinir.</p>
+                    </div>
+                  </div>                
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3">
+              <p>Üniversite sınavında matematik konularının yıllara göre soru dağılımı:</p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Konular</th>
+                        <th scope="col">2021</th>
+                        <th scope="col">2020</th>
+                        <th scope="col">2019</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Parabol</th>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Olasılık</th>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Trigonometri</th>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>3</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Logaritma</th>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Limit - Süreklilik</th>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Türev</th>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">İntegral</th>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>4</td>
+                      </tr>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                Haftanın Sözü
+                </div>
+                <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>“Matematiğin hiçbir dalı yoktur ki, ne kadar soyut olursa olsun, bir gün gerçek dünyada uygulama alanı bulmasın.”</p>
+                    <footer class="blockquote-footer">Lobachevski </footer>
+                </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    background-image: url(body.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    
+
+    
+  
+}
+#carousel{
+    width: 700px;
+    height: 500px;
+}
+#card-1, #card-2{
+    width: 200px;
+    height: 100px;
+
+}

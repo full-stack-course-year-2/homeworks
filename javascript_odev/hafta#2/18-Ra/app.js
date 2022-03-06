@@ -1,7 +1,7 @@
 // calculator app
 
 function typecontrol(a, b) {
-  if (typeof a === "number" && typeof b === "number") {
+  if (typeof a === 'number' && typeof b === 'number') {
     return true;
   } else {
     return false;
@@ -73,7 +73,7 @@ console.log(calculate(1, 0, '/'));
 console.log(calculate(1, 2, '%'));
 // expected output: { result: null, error: 'Invalid operator' }
 
-console.log(calculate("a", {}, "+"))
+console.log(calculate('a', {}, '+'))
 // expected output: { result: null, error: 'Invalid input' }
 
 

@@ -40,7 +40,7 @@ function conclusion(number_1, number_2, process){
                 break;
 
             case 'bol':
-                if (number_2 = 0){
+                if (number_2 == 0){
                     returnValue.conclusion = bol(number_1, number_2);
                     returnValue.eror = 'No Eror';
         

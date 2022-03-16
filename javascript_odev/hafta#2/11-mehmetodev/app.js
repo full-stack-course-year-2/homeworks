@@ -1,46 +1,50 @@
 
-function hesapla(a, islem, b){
+function calculator(a,b,islem){
 
     var result= {
-        a:'',
-        islem:'',
-        b:'',
-        hata: '',
-        sonuc:'',
+         sonuc:0,
+         hata: '',
     }
     
-        result.a = a;
-        result.islem = islem;
-        result.b = b;
-
-       if(a+b){
-           result.sonuc=a+b;
-           result.hata='hata yok'
-       } else
-       if(a-b){
-        result.sonuc=a-b;
-        result.hata='hata yok'
-       } else
-       if(a *b){
-        result.sonuc=a-b;
-        result.hata='hata yok'
-       }
-
-
-        if(typeof(a) !== 'number'|| typeof(b) !== 'number'){
-            result.hata = 'sayi degeri gereklı';
+         if(typeof(a) !== 'number'|| typeof(b) !== 'number'){
+            result.hata = 'Lütfen Sayı Gırınız';
+            return result;
         }
-       
-                  
-        if(b ==0 && islem == "/" ){
+          if(islem == "/" && b ==0){
             result.hata="ıkıncı sayı 0 olamaz";
-            sonuc='sonsuz'
+            return result;
         }
-        return  result;
+          if([ "+","-","*","/"].indexOf(islem)== -1 ){
+            result.hata="hatali islem operatoru.";
+            return result;}
+
+          switch (islem) {
+                case "+":
+                    result.sonuc=a + b ;
+                     break;
+                case "-":
+                    result.sonuc=a - b ;
+                     break;
+                case "*":
+                    result.sonuc==a * b;
+                     break;
+                case "/":
+                    result.sonuc=a /b ;
+                     break;
+                default:
+                    result.sonuc=0;
+                    break;
+            }
+            return result;
+        
 }
 
-       console.log(hesapla(10,'+',5))
-       console.log(hesapla(10,'-',5))
-       console.log(hesapla(10,'*',5))
-       console.log(hesapla(10,'/',0))
-       console.log(hesapla('alı','islem','velı'))
+console.log(calculator(10,8,"+"))
+console.log(calculator(10,8,"-"))
+console.log(calculator(10,8,"*"))
+console.log(calculator(10,8,"/"))
+
+
+console.log(calculator(10,"saf","*"))
+console.log(calculator(10,0,"/"))
+console.log(calculator(10,2,"asfag"))

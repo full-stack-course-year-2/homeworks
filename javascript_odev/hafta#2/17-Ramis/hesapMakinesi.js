@@ -33,6 +33,8 @@ var result = {
     }
     return result;
 }
+
+
 console.log('Toplama işlemi Sonucu = ', calc(3, 5, "topl"));
 console.log('Çıkarma İşlemi Sonucu =  ', calc(10, 20, "cik"));
 console.log('Bölme İşlemi Sonucu =  ', calc(6, 4, "böl"));

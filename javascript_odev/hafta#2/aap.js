@@ -1,54 +1,53 @@
-var sonuc = topla(3, 5);
-var sonuc1 = cikar(69, 35);
-var sonuc2 = bolme(0, 55);
-var sonuc3 = carpma(0, 37);
+function hesapmakinasi(sayi1, sayi2, islem) {
+  let result = {
+    sonuc: 0,
+    hata: "",
+  };
 
-function topla(sayi1, sayi2) {
-  var result = sayi1 + sayi2;
-  return result;
-}
-function cikar(sayi1, sayi2) {
-  var result = sayi1 - sayi2;
-  return result;
-}
+  if (typeof sayi1 !== "number" || typeof sayi2 !== "number") {
+    result.hata = "Lutfen sayisal deger giriniz";
+    return result;
+  }
 
-function bolme(sayi1, sayi2) {
-  var result = sayi1 / sayi2;
-  if (sayi1 <= "0") {
-    result = "sonuc hatali:  " + " ilk sayi sifir olamaz!!!";
-  } else {
-    result = "sonuc dogru:   " + result;
+  if (islem == "/" && sayi2 == 0) {
+    result.hata = " Bolme islemlerinde ikinci sayi sifir olamaz.";
+    return result;
+  }
+  if (["+", "-", "/", "*"].indexOf(islem) == -1) {
+    result.hata = "Hatali islem operatoru.";
+    return result;
+  }
+  switch (islem) {
+    case "+":
+      result.sonuc = sayi1 + sayi2;
+      break;
+    case "-":
+      result.sonuc = sayi1 - sayi2;
+      break;
+    case "/":
+      result.sonuc = sayi1 / sayi2;
+      break;
+    case "*":
+      result.sonuc = sayi1 * sayi2;
+      break;
+
+    default:
+      result.sonuc = 0;
+      break;
   }
 
   return result;
 }
 
-function carpma(sayi1, sayi2) {
-  var result = sayi1 * sayi2;
-  if (sayi1 * sayi2 == 0) {
-    result =
-      "sonuc sifir:    " + " Birsayinin sifirla carpimi her zaman sifirdir";
-  } else {
-    result = "sonuc dogru:" + result;
-  }
-  return result;
-}
+console.log("Toplama islemi", hesapmakinasi(15, 8, "+"));
+console.log("Cikarma islemi", hesapmakinasi(20, 6, "-"));
+console.log("Carpma islemi", hesapmakinasi(14, 7, "*"));
+console.log("Bolme  islemi", hesapmakinasi(90, 6, "/"));
+console.log("----------------------------------------");
 
-console.log(9 * 81);
-console.log(sonuc2);
-console.log(900 / 6);
-console.log(25 + 99);
-console.log(sonuc3);
-console.log(101 * 202);
-
-function araba(tercih) {
-  var result;
-  if (tercih == "mercedes,siyah") {
-    result = "kesinlikle Al";
-  } else {
-    result = "Bu Alinmaz";
-  }
-  return result;
-}
-console.log(araba("mercedes,siyah"));
-console.log(araba("bmw,kirmizi"));
+// Hata kontrolu -- 1
+console.log("Carpma islemi", hesapmakinasi(30, "abc", "*"));
+// Hata kontrolu -- 2
+console.log("Bolme islemi", hesapmakinasi(76, 0, "/"));
+// Hata kontrulu -- 3
+console.log("toplama islemi", hesapmakinasi(128, 99, "abc"));

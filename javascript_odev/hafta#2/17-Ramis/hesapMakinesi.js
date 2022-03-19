@@ -2,21 +2,16 @@ function calc(deger_1, deger_2, komut) {
 var result = {
     sonuc:0, 
     hata:'!'
-}
-
-
-if ((typeof deger_1 !== 'number') || (typeof deger_2 !== 'number')) {
+    }
+    if ((typeof deger_1 !== 'number') || (typeof deger_2 !== 'number')) {
     result.hata = 'lütfen sayı giriniz.'
-  
-} 
-if (komut == '/' && deger_2 == 0) {
+    } 
+    if (komut == '/' && deger_2 == 0) {
     result.hata = 'Hatalı bir bölme islemi'
-    
-}
-
-if(['+', '-', '/', '*'].indexOf(komut) !== -1) {
+    }
+    if(['+', '-', '/', '*'].indexOf(komut) !== -1) {
     result.hata = 'Hatali islem operatörü kullaniliyor.'
-}
+    }
      else {
     switch (komut) {
         case 'topl':
@@ -34,9 +29,7 @@ if(['+', '-', '/', '*'].indexOf(komut) !== -1) {
         default:
             result.sonuc = 0;
             break;
-
-        }
-      
+        }    
     }
     return result;
 }

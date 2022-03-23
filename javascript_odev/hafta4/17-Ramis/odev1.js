@@ -49,12 +49,16 @@ console.log(yukseklik);
 //3. Yalnızca ad ve yükseklik özelliklerine sahip nesne dizisini alın
 adveyukseklik = characters.map(item => {
     return{
-       Adveyükseklik: (item.name) + (item.height)
+       adveyükseklik: (item.name) + ' ' + (item.height)
     }
 });
 console.log(adveyukseklik);
 
 //4. Tüm ilk isimlerin dizisini al
+ilkIsim = characters.map(item => {
+    return item.name
+});
+console.log(ilkIsim);
 
 
 //***REDUCE***
@@ -66,6 +70,7 @@ console.log(adveyukseklik);
 
 //***FILTER***
 //1. 100'den büyük kütleye sahip karakterler alın
+
 //2. 200'den az yüksekliğe sahip karakterler alın
 //3. Tüm erkek karakterleri al
 //4. Tüm kadın karakterleri al
@@ -74,7 +79,7 @@ console.log(adveyukseklik);
 //***SORT***
 //1. Kütleye göre sırala
 
-// sira = characters.sort((a, b) => (height.a-height.b));
+// var sira = characters.sort(a, b) => {(a-b)};
 // console.log(sira);
 
 //2. Yüksekliğe göre sırala

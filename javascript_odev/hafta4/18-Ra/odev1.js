@@ -120,6 +120,7 @@ listOfGenderMale = characters.filter(character => {
 })
 
 
+console.log('listOfGenderMale')
 console.log(listOfGenderMale)
 
 //4. Tüm kadın karakterleri al

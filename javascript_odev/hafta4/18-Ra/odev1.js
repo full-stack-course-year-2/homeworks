@@ -49,11 +49,11 @@ console.log(heightList)
 //3. Yalnızca ad ve yükseklik özelliklerine sahip nesne dizisini alın
 nameHeightList = characters.map(character => {
     name_ = character.name
-    height = character.height    
+    height = character.height
     return {
         'name': name_,
         'height': height
-        }
+    }
 })
 console.log(nameHeightList)
 
@@ -83,7 +83,7 @@ console.log('Total Height = ' + totalHeight)
 //3. Göz rengine göre toplam karakter sayısını alın
 
 eyeColorList = characters.reduce((total, character) => {
-    if(total[character.eye_color] == undefined) {
+    if (total[character.eye_color] == undefined) {
         total[character.eye_color] = 1
     } else {
         total[character.eye_color] += 1
@@ -124,10 +124,9 @@ console.log('listOfGenderMale')
 console.log(listOfGenderMale)
 
 //4. Tüm kadın karakterleri al
-listOfGenderFemale = characters.filter(character =>     
-    {
-        return character.gender == 'female'
-    })
+listOfGenderFemale = characters.filter(character => {
+    return character.gender == 'female'
+})
 
 console.log(listOfGenderFemale)
 
@@ -143,9 +142,9 @@ console.log(sortByHeight)
 //3. İsme göre sırala
 
 sortByName = characters.sort((a, b) => {
-    if(a.name < b.name) {
+    if (a.name < b.name) {
         return -1
-    } else if(a.name > b.name) {
+    } else if (a.name > b.name) {
         return 1
     } else {
         return 0
@@ -155,9 +154,9 @@ console.log('sortByName')
 console.log(sortByName)
 //4. Cinsiyete göre sırala
 sortByGender = characters.sort((a, b) => {
-    if(a.gender < b.gender) {
+    if (a.gender < b.gender) {
         return -1
-    } else if(a.gender > b.gender) {
+    } else if (a.gender > b.gender) {
         return 1
     } else {
         return 0
@@ -196,27 +195,26 @@ console.log('hasEveryCharacterGenderMale = ' + hasEveryCharacterGenderMale)
 
 //***SOME***
 //1. En az bir erkek karakter var mı?
-isThereAtLeastOneMaleCharacter = characters.some(character =>
-    { 
-        return character.gender == 'male'
-    }
+isThereAtLeastOneMaleCharacter = characters.some(character => {
+    return character.gender == 'male'
+}
 )
 console.log('isThereAtLeastOneMaleCharacter = ' + isThereAtLeastOneMaleCharacter)
 
 //2. Mavi gözlü en az bir karakter var mı?
 isThereAtLeastOneBlueEyedCharacter = characters.some(character => {
     return character.eye_color == 'blue'
-    })
+})
 console.log('isThereAtLeastOneBlueEyedCharacter = ' + isThereAtLeastOneBlueEyedCharacter)
 //3. 210'dan uzun en az bir karakter var mı?
 isThereAtLeastOneCharacterTallThan210 = characters.some(character => {
     return character.height > 210
-    })
+})
 console.log('isThereAtLeastOneCharacterTallThan210 = ' + isThereAtLeastOneCharacterTallThan210)
 
 //4. Kütlesi 50'den az olan en az bir karakter var mı?
 isThereAtLeastOneCharacterWeakThan50 = characters.some(character => {
     return character.mass < 50
-    }
+}
 )
 console.log('isThereAtLeastOneCharacterWeakThan50 = ' + isThereAtLeastOneCharacterWeakThan50)

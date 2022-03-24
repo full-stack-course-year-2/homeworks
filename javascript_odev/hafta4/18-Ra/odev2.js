@@ -25,7 +25,7 @@ peopleOlderThan30 = people.filter(person => {
     // find the age of the person from DOB
     age = new Date().getFullYear() - new Date(person.DOB).getFullYear()
     console.log(age)
-    return age > 30  
+    return age > 30
 })
 
 console.log('People Older Than 30')
@@ -51,7 +51,7 @@ console.log(sortByDOB)
 
 // 5) Her bölümde kaç kişi var? 
 countByDepartment = people.reduce((acc, person) => {
-    if(acc[person.department] == undefined) {
+    if (acc[person.department] == undefined) {
         acc[person.department] = 1
     } else {
         acc[person.department] += 1

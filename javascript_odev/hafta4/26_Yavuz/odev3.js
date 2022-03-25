@@ -51,5 +51,6 @@ console.log(sonuc);
 sonucX = orders.filter(item => (item.delivered == true ));
 console.log(sonucX);
 
+
 sonuc5 = sonucX.some(item => (item.items[0].productId == '123'));
 console.log(sonuc5);

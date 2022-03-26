@@ -127,6 +127,7 @@ sonuc = characters.sort((a, b) => {
     if (a.name < b.name) return -1;
     return 1;
 });
+
 console.log(sonuc);
 
 //4. Cinsiyete göre sırala

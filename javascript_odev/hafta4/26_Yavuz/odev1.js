@@ -111,28 +111,31 @@ console.log(sonuc);
 
 //***SORT***
 //1. Kütleye göre sırala
-characters.sort((a, b) => {
+const _mass = characters.sort((a, b) => {
     return a.mass - b.mass;
 });
-console.log(characters);
+console.log(_mass);
 
 //2. Yüksekliğe göre sırala
-characters.sort((a, b) => {
+const _height = characters.sort((a, b) => {
     return a.height - b.height;
 });
-console.log(characters);
+console.log(_height);
 //3. İsme göre sırala
-characters.sort((a, b) => {
-    return a.name.localeCompare(b.name);
+
+const _name = characters.sort((a, b) => {
+    if (a.name < b.name) return -1;
+    return 1;
 });
-console.log(characters);
+console.log(_name);
 
 //4. Cinsiyete göre sırala
 
-characters.sort((a, b) => {
-    return a.gender.localeCompare(b.gender);
+const _gender = characters.sort((a, b) => {
+    if(a.gender === 'female') return -1;
+    return 1;
 });
-console.log(characters);
+console.log(_gender);
 
 
 //***EVERY***

@@ -111,31 +111,31 @@ console.log(sonuc);
 
 //***SORT***
 //1. Kütleye göre sırala
-const _mass = characters.sort((a, b) => {
+ sonuc = characters.sort((a, b) => {
     return a.mass - b.mass;
 });
-console.log(_mass);
+console.log(sonuc);
 
 //2. Yüksekliğe göre sırala
-const _height = characters.sort((a, b) => {
+sonuc = characters.sort((a, b) => {
     return a.height - b.height;
 });
-console.log(_height);
+console.log(sonuc);
 //3. İsme göre sırala
 
-const _name = characters.sort((a, b) => {
+sonuc = characters.sort((a, b) => {
     if (a.name < b.name) return -1;
     return 1;
 });
-console.log(_name);
+console.log(sonuc);
 
 //4. Cinsiyete göre sırala
 
-const _gender = characters.sort((a, b) => {
+sonuc = characters.sort((a, b) => {
     if(a.gender === 'female') return -1;
     return 1;
 });
-console.log(_gender);
+console.log(sonuc);
 
 
 //***EVERY***

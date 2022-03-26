@@ -50,7 +50,5 @@ console.log(sonuc);
 // 5) 123 kimlikli ürün satıldı mı?
 sonucX = orders.filter(item => (item.delivered == true ));
 console.log(sonucX);
-
-
 sonuc5 = sonucX.some(item => (item.items[0].productId == '123'));
 console.log(sonuc5);

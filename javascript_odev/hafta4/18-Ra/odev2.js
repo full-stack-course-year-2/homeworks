@@ -43,7 +43,7 @@ console.log(getFullNameList)
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
 sortByDOB = people.sort((a, b) => {
-    return new Date(a.DOB) - new Date(b.DOB)
+    return new Date(b.DOB) - new Date(a.DOB)
 })
 
 console.log('Sort By DOB')

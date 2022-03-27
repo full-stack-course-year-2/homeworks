@@ -17,7 +17,9 @@ const people = [
 totalSalary = people.reduce((acc, person) => {
     return acc + parseInt(person.salary)
 }, 0)
-console.log('Total Salary = ' + totalSalary)
+averageSalary = totalSalary / people.length
+
+console.log('averageSalary: ', averageSalary)
 
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
@@ -41,7 +43,7 @@ console.log(getFullNameList)
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
 sortByDOB = people.sort((a, b) => {
-    return new Date(a.DOB) - new Date(b.DOB)
+    return new Date(b.DOB) - new Date(a.DOB)
 })
 
 console.log('Sort By DOB')

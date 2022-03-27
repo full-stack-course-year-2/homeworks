@@ -41,7 +41,7 @@ console.log('Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni 
 console.log(toplamFiyat);
 
 // 3) Tüm siparişler teslim edildi mi?
-sonuc = orders.every(item => item.delivered == true);
+sonuc = orders.every(item => item.delivered);
 console.log('Tüm siparişler teslim edildi mi?');
 console.log(sonuc);
 

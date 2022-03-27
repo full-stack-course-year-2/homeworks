@@ -21,7 +21,7 @@ const orders = [
 ];
 
 // 1) Teslim edilmeyen 234 ID'li müşteri için siparişlerin bir listesini alın.
-sonuc = orders.filter(yenı => (yenı.customerId == '234' && yenı.delivered == false ));
+sonuc = orders.filter(list => (list.customerId == '234' && list.delivered == false ));
 console.log(sonuc[0].items);
 
 // 2) Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni bir özellik oluşturun.

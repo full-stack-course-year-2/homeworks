@@ -31,46 +31,46 @@ const characters = [
 
 //***MAP***
 //1. Tüm isimlerin dizisini al
-sonuc=characters.map(item=>{
+result=characters.map(item=>{
     return item.name
 })
-console.log(sonuc);
+console.log(result);
 
 //2. Tüm yüksekliklerin dizisini al
-sonuc=characters.map(item=>{
+result=characters.map(item=>{
     return item.height
 })
-console.log(sonuc);
+console.log(result);
 
 //3. Yalnızca ad ve yükseklik özelliklerine sahip nesne dizisini alın
-sonuc=characters.map(item=>{
+result=characters.map(item=>{
     return{
-        adı:item.name,
-        yukseklık:item.height,
+        names:item.name,
+        heights:item.height,
     }
 })
-console.log(sonuc);
+console.log(result);
 //4. Tüm ilk isimlerin dizisini al
-sonuc = characters.map(item => item.name.split(" ") [0]);
-console.log(sonuc);
+result = characters.map(item => item.name.split(" ") [0]);
+console.log(result);
 
 
 
 //***REDUCE***
 //1. Tüm karakterlerin toplam kütlesini alın
-sonuc=characters.reduce((acc,ıtem)=>{
-    acc=acc+ıtem.mass;
+result=characters.reduce((acc,item)=>{
+    acc=acc+item.mass;
     return acc;
    },0);
-   console.log('toplam Kutle= ' +sonuc);
+   console.log('toplam Kutle= ' +result);
 //2. Tüm karakterlerin toplam yüksekliğini alın
-sonuc=characters.reduce((acc,ıtem)=>{
-    acc=acc+ıtem.height;
+result=characters.reduce((acc,item)=>{
+    acc=acc+item.height;
     return acc;
    },0);
-   console.log('toplam Yukseklık= ' +sonuc);
+   console.log('toplam Yukseklık= ' +result);
 //3. Göz rengine göre toplam karakter sayısını alın
-sonuc=characters.reduce((acc,value)=>{
+result=characters.reduce((acc,value)=>{
     if(acc[value.eye_color]){
         acc[value.eye_color]=acc[value.eye_color]+1;
     }else{
@@ -78,25 +78,25 @@ sonuc=characters.reduce((acc,value)=>{
     }
     return acc;
 },{})
-console.log(sonuc);
+console.log(result);
 //4. Tüm karakter adlarındaki toplam karakter sayısını alın
-sonuc = characters.reduce((acc, item) => acc + item.name.length, 0);
-console.log(sonuc);
+result = characters.reduce((acc, item) => acc + item.name.length, 0);
+console.log(result);
 
 
 //***FILTER***
 //1. 100'den büyük kütleye sahip karakterler alın
-sonuc=characters.filter(item=>item.mass>100)
-console.log(sonuc);
+result=characters.filter(item=>item.mass>100)
+console.log(result);
 //2. 200'den az yüksekliğe sahip karakterler alın
-sonuc=characters.filter(item=>item.height<200)
-console.log(sonuc);
+result=characters.filter(item=>item.height<200)
+console.log(result);
 //3. Tüm erkek karakterleri al
-sonuc=characters.filter(item=>item.gender=='male')
-console.log(sonuc);
+result=characters.filter(item=>item.gender=='male')
+console.log(result);
 //4. Tüm kadın karakterleri al
-sonuc=characters.filter(item=>item.gender=='female')
-console.log(sonuc);
+result=characters.filter(item=>item.gender=='female')
+console.log(result);
 
 
 
@@ -105,50 +105,50 @@ console.log(sonuc);
 result=characters.sort((a,b)=>a.mass-b.mass);
 console.log(result);
 // //2. Yüksekliğe göre sırala
-sonuc=characters.sort((a,b)=>a.height-b.height);
-console.log(sonuc);
+result=characters.sort((a,b)=>a.height-b.height);
+console.log(result);
 //3. İsme göre sırala
-characters.sort((ıtem,value)=>{
-    if(ıtem.name<value.name) {
+characters.sort((item,value)=>{
+    if(item.name<value.name) {
      return -1}else{
      return 1;}
 })
 console.log(characters)
 //4. Cinsiyete göre sırala
-sonuc=characters.sort((a,b)=>{
+result=characters.sort((a,b)=>{
     if(a.gender=='female'){
         return -1;
     }else{
         return 1;
     }
 })
-console.log(sonuc)
+console.log(result)
 
 //***EVERY***
 //1. Her karakterin mavi gözleri var mı?
-sonuc=characters.every(item=>item.eye_color == 'blue')
-console.log(sonuc);
+result=characters.every(item=>item.eye_color == 'blue')
+console.log(result);
 //2. Her karakterin kütlesi 40'tan fazla mı?
-sonuc=characters.every(item=>item.mass > 40);
-console.log(sonuc);
+result=characters.every(item=>item.mass > 40);
+console.log(result);
 //3. Her karakter 200'den kısa mı?
-sonuc=characters.every(item=>item.height <200);
-console.log(sonuc);
+result=characters.every(item=>item.height <200);
+console.log(result);
 //4. Her karakter erkek mi?
-sonuc=characters.every(item=>item.gender == 'male');
-console.log(sonuc);
+result=characters.every(item=>item.gender == 'male');
+console.log(result);
 
 
 //***SOME***
 //1. En az bir erkek karakter var mı?
-sonuc=characters.some(ıtem=>ıtem.gender=='male')
-console.log(sonuc);
+result=characters.some(item=>item.gender=='male')
+console.log(result);
 //2. Mavi gözlü en az bir karakter var mı?
-sonuc=characters.some(ıtem=>ıtem.eye_color =='blue')
-console.log(sonuc);
+result=characters.some(item=>item.eye_color =='blue')
+console.log(result);
 //3. 210'dan uzun en az bir karakter var mı?
-sonuc=characters.some(item=>item.height > 210)
-console.log(sonuc);
+result=characters.some(item=>item.height > 210)
+console.log(result);
 //4. Kütlesi 50'den az olan en az bir karakter var mı?
-sonuc=characters.some(item=>item.mass<50);
-console.log(sonuc);
+result=characters.some(item=>item.mass<50);
+console.log(result);

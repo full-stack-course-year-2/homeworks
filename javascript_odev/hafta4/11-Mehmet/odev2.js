@@ -22,47 +22,47 @@ result =people.reduce((accumulator,value)=>{
 console.log(result/12);
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
-const peoples = people.map((item)=>{
-    const yıl= item.DOB.split('/')[2];
-    const simdıkıYıl=new Date().getFullYear();
-    const yas =simdıkıYıl-yıl;
+const newpeople = people.map((item)=>{
+    const year= item.DOB.split('/')[2];
+    const nowyear=new Date().getFullYear();
+    const age =nowyear-year;
     return {
-        yas,
+        age,
         ...item,
     }
 });
-const sonuc=peoples.filter((item)=>item.yas>30);
+const sonuc=newpeople.filter((item)=>item.age>30);
 console.log(sonuc);
 
 
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-people.forEach(ııtem=>console.log(ııtem.firstName,ııtem.lastName))
+people.forEach(item=>console.log(item.firstName,item.lastName))
 
 
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
 const sumı = people.map((item)=>{
-    const yıl= item.DOB.split('/')[2];
-    const simdıkıYıl=new Date().getFullYear();
-    const yas =simdıkıYıl-yıl;
+    const year= item.DOB.split('/')[2];
+    const nowyear=new Date().getFullYear();
+    const age =nowyear-year;
     return {
-        yas,
+        age,
         ...item,
     }
 });
-resultt=sumı.sort((a,b)=>a.yas-b.yas)
+resultt=sumı.sort((a,b)=>a.age-b.age)
 console.log(resultt);
 
 
 // 5) Her bölümde kaç kişi var? 
 
-const departmentgroupnumber=people.reduce((acc,ıtem)=>{
-    if(acc[ıtem.department]){
-        acc[ıtem.department]++;
+const departmentgroupnumber=people.reduce((acc,item)=>{
+    if(acc[item.department]){
+        acc[item.department]++;
     }else{
-         acc[ıtem.department]=1;
-    }
+         acc[item.department]=1;
+    }item
     return acc;
 } ,{});
   console.log(departmentgroupnumber);

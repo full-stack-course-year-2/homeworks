@@ -12,55 +12,51 @@ const people = [
     { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '03/24/1985', department: 'Office Management', salary: '49000' },
     { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' },
 ];
-
+let result = null;
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
-totalSalary = people.reduce((acc, person) => {
-    return acc + parseInt(person.salary)
-}, 0)
-console.log('Total Salary = ' + totalSalary)
-
-averageSalary = totalSalary / people.length
-console.log('averageSalary: ', averageSalary)
-
+result = people.reduce((acc, item) => {
+    acc = acc + Number(item.salary);
+    return acc;
+}, 0);
+console.log(" Dizideki tüm insanların ortalama geliri :", result/people.length);
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
-peopleOlderThan30 = people.filter(person => {
-    // find the age of the person from DOB
-    age = new Date().getFullYear() - new Date(person.DOB).getFullYear()
-    console.log(age)
-    return age > 30
-})
+let tarih = new Date();
+let yil = tarih.getFullYear(); 
 
-console.log('People Older Than 30')
-console.log(peopleOlderThan30)
+
+result = people.filter(item => (yil - new Date(item.DOB).getFullYear() > 30));
+console.log("Su anda 30 yaşından büyük kişiler :", result);
 
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-getFullNameList = people.map(person => {
-    return person.firstName + ' ' + person.lastName
-})
-console.log('Full Name List')
-console.log(getFullNameList)
+result = people.map(item => {
+    return{
+        
+        tamAdi: item.firstName + " " + item.lastName,
+    }
+});
+console.log("Kişilerin tam adının bir listesi:", result);
+
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
-sortByDOB = people.sort((a, b) => {
-    return new Date(b.DOB) - new Date(a.DOB)
-})
+resultDort = people.sort( (a, b) =>{
+   return new Date(b.DOB).getFullYear() - new Date(a.DOB).getFullYear()
+});
 
-console.log('Sort By DOB')
-console.log(sortByDOB)
+console.log("Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesi:", resultDort);    
 
 
 
 // 5) Her bölümde kaç kişi var? 
-countByDepartment = people.reduce((acc, person) => {
-    if (acc[person.department] == undefined) {
-        acc[person.department] = 1
-    } else {
-        acc[person.department] += 1
+result = people.reduce((acc , item) => {
+    if (acc[item.department]){
+        acc[item.department] ++;
+    }else{
+        acc[item.department] = 1;
     }
-    return acc
-}, {})
+    return acc;
+}, {});
 
-console.log('Count By Department')
-console.log(countByDepartment)
+console.log("Her bölümde kaç kişi var:", result);
+

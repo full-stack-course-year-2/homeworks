@@ -14,53 +14,17 @@ const people = [
 ];
 
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
-totalSalary = people.reduce((acc, person) => {
-    return acc + parseInt(person.salary)
-}, 0)
-console.log('Total Salary = ' + totalSalary)
-
-averageSalary = totalSalary / people.length
-console.log('averageSalary: ', averageSalary)
 
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
-peopleOlderThan30 = people.filter(person => {
-    // find the age of the person from DOB
-    age = new Date().getFullYear() - new Date(person.DOB).getFullYear()
-    console.log(age)
-    return age > 30
-})
-
-console.log('People Older Than 30')
-console.log(peopleOlderThan30)
 
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-getFullNameList = people.map(person => {
-    return person.firstName + ' ' + person.lastName
-})
-console.log('Full Name List')
-console.log(getFullNameList)
+
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
-sortByDOB = people.sort((a, b) => {
-    return new Date(b.DOB) - new Date(a.DOB)
-})
-
-console.log('Sort By DOB')
-console.log(sortByDOB)
-
 
 
 // 5) Her bölümde kaç kişi var? 
-countByDepartment = people.reduce((acc, person) => {
-    if (acc[person.department] == undefined) {
-        acc[person.department] = 1
-    } else {
-        acc[person.department] += 1
-    }
-    return acc
-}, {})
 
-console.log('Count By Department')
-console.log(countByDepartment)
+

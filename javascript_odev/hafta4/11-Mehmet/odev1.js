@@ -105,11 +105,11 @@ console.log(sonuc);
 result=characters.sort((a,b)=>a.mass-b.mass);
 console.log(result);
 // //2. Yüksekliğe göre sırala
-sonuc=characters.sort((emın,mehmet)=>emın.height-mehmet.height);
+sonuc=characters.sort((a,b)=>a.height-b.height);
 console.log(sonuc);
 //3. İsme göre sırala
-characters.sort((ısım,soyısım)=>{
-    if(ısım.name<soyısım.name) {
+characters.sort((ıtem,value)=>{
+    if(ıtem.name<value.name) {
      return -1}else{
      return 1;}
 })

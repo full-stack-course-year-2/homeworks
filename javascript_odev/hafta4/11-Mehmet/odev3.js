@@ -25,16 +25,16 @@ sonuc = orders.filter(yenı => (yenı.customerId == '234' && yenı.delivered == 
 console.log(sonuc[0].items);
 
 // 2) Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni bir özellik oluşturun.
-const toplamfıyat = orders.map(item => {
+const totalprıce = orders.map(item => {
     return {
             ...item,
-            toplamfıyat: item.items.reduce((acc, item) => {
+            totalprıce: item.items.reduce((acc, item) => {
             acc =acc+ item.price;
             return acc;
             } , 0)
     }
 });
-console.log(toplamfıyat);
+console.log(totalprıce);
 
 
 // 3) Tüm siparişler teslim edildi mı?
@@ -46,5 +46,5 @@ console.log(result);
 sonuc = orders.some ( item=>item.orderId=='123' )
 console.log(sonuc);
 // 5) 123 kimlikli ürün satıldı mı?
-sonuc = orders.some(sıparıs => sıparıs.items.some(item => item.productId == "123"));
+sonuc = orders.some(order=> order.items.some(item => item.productId == "123"));
 console.log(sonuc)

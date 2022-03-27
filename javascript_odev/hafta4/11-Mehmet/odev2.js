@@ -22,7 +22,7 @@ result =people.reduce((accumulator,value)=>{
 console.log(result/12);
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
-const insanlar = people.map((item)=>{
+const peoples = people.map((item)=>{
     const yıl= item.DOB.split('/')[2];
     const simdıkıYıl=new Date().getFullYear();
     const yas =simdıkıYıl-yıl;
@@ -31,13 +31,13 @@ const insanlar = people.map((item)=>{
         ...item,
     }
 });
-const sonuc=insanlar.filter((item)=>item.yas>30);
+const sonuc=peoples.filter((item)=>item.yas>30);
 console.log(sonuc);
 
 
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-people.forEach(ınsan=>console.log(ınsan.firstName,ınsan.lastName))
+people.forEach(ııtem=>console.log(ııtem.firstName,ııtem.lastName))
 
 
 

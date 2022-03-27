@@ -59,10 +59,13 @@ ilkIsim = characters.map(item => {
     return item.name
 });
 console.log(ilkIsim);
+///
 
 
 //***REDUCE***
 //1. Tüm karakterlerin toplam kütlesini alın
+kutle = characters.reduce(item => item.mass);
+console.log(kutle);
 //2. Tüm karakterlerin toplam yüksekliğini alın
 //3. Göz rengine göre toplam karakter sayısını alın
 //4. Tüm karakter adlarındaki toplam karakter sayısını alın
@@ -70,6 +73,10 @@ console.log(ilkIsim);
 
 //***FILTER***
 //1. 100'den büyük kütleye sahip karakterler alın
+
+kutle = characters.filter(mass => {
+    return characters.mass >= 100;
+    console.log(kutle);
 
 //2. 200'den az yüksekliğe sahip karakterler alın
 //3. Tüm erkek karakterleri al

@@ -15,36 +15,39 @@ const people = [
 
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
 
-for (let i = 0; i < people.length; i++){
-   
-    sonuc = people.filter(item => (item.DOB))
-    console.log(sonuc[i].DOB);
-    };
+let ortalama = (people.reduce((acc, item) => acc + parseInt(item.salary), 0)/people.length);
+console.log(ortalama);
+  
+ 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
 
-
-for (let i = 0; i < people.length; i++){
-   
-sonuc = people.filter(item => (item.DOB))
-console.log(sonuc[i].DOB);
-};
-
-
-
-
-
-
+const buyuk = people.filter(item => (new Date().getFullYear() - new Date(item.DOB).getFullYear()) > 30);
+console.log(buyuk);
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
- let isim = 0;
+const liste = people.map(item => item.firstName + ' ' + item.lastName);
+console.log(liste);
+//oder
  isim = people.filter(adSoyad => adSoyad.firstName); //burayı sor neden firstName ya da başka bir şey geliyor???
  for (i = 0; i < people.length; i++)
- console.log(`${isim[i].firstName} ${isim[i].lastName}`);
+ console.log(`${isim[i].firstName}`+ ' ' + `${isim[i].lastName}`);
 
 
+  
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
+
+siralama = people.sort((itemA, itemB) => new Date(itemB.DOB ) - new Date(itemA.DOB));
+console.log(siralama);
 
 
 // 5) Her bölümde kaç kişi var? 
-
+const bolumTotal = people.reduce((acc, item) => {
+    if (acc[item.department]) {
+         (acc[item.department]) = (acc[item.department] + 1);
+    } else { 
+         (acc[item.department]) = 1;
+    }
+    return acc;
+}, {});
+console.log(bolumTotal);
 

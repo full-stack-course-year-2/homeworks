@@ -20,11 +20,6 @@ const people = [
 
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-let isim = 0;
- isim = people.filter(adSoyad => adSoyad.firstName); //burayı sor neden firstName ya da başka bir şey geliyor???
- for (i = 0; i < people.length; i++)
- console.log(`${isim[i].firstName}`+ ' ' + `${isim[i].lastName}`);
-
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
 

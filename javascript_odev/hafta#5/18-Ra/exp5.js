@@ -10,4 +10,3 @@ usersWhoHaveNotCommented.forEach((user, index) => {
     console.log((index + 1).toString() + "- " + user.firstName + " " + user.lastName);
 }
 );
-

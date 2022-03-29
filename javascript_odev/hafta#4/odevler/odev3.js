@@ -20,16 +20,30 @@ const orders = [
     ]},
 ];
 
+let sonuc = null
 // 1) Teslim edilmeyen 234 ID'li müşteri için siparişlerin bir listesini alın.
-
+sonuc = orders.filter(item => item.customerId == "234" && item.delivered == false)
+console.log(sonuc);
 
 // 2) Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni bir özellik oluşturun.
-
+sonuc = orders.map(personOrder => {
+     return {
+         ...personOrder,
+         totalprice: personOrder.items.reduce((acc,value) => acc + value.price, 0)
+    }
+})
+console.log(sonuc)
 
 // 3) Tüm siparişler teslim edildi mi?
+sonuc = orders.every(item => item.delivered);
+console.log(sonuc);
 
 
 // 4) '123' kimlikli müşteri sipariş verdi mi?
+sonuc = orders.some(item => item.customerId == "123" && item.delivered);
+console.log(sonuc);
 
 
 // 5) 123 kimlikli ürün satıldı mı?
+sonuc = orders.some(okay => okay.items.some(item => item.productId == "123" && item.delivered));
+console.log(sonuc);

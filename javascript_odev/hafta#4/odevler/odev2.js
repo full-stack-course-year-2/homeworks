@@ -14,17 +14,36 @@ const people = [
 ];
 
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
-
-
+sonuc = people.reduce((accumulator , item) => {
+    return accumulator + parseInt(item.salary)
+}, 0);
+console.log("Gelir Ortalama = " + (sonuc))
+console.log(sonuc);
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
-
+sonuc = people.filter(item => (new Date().getFullYear() - new Date(item.DOB).getFullYear()) > 30);
+console.log(sonuc);
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-
+ sonuc = people.map(item => {
+     return {
+         firstName: item.firstName,
+         lastName: item.lastName
+     }
+ });
+ console.log(sonuc);
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
+const sirala = people.sort((persona , personb) => new Date(personb.DOB) - new Date(persona.DOB));
+console.log(sirala);
 
 
 // 5) Her bölümde kaç kişi var? 
+sonuc = people.reduce((acc , item) => {
+    if(acc[item.department]) {
+        acc[item.department]++;
+    }else acc[item.department]-1;
+    return acc
+},{})
+console.log(sonuc);
 
 

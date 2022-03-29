@@ -48,12 +48,32 @@ const orders = [
   },
 ];
 
-// 1) Teslim edilmeyen 234 ID'li müşteri için siparişlerin bir listesini alın.
+let result = null;
 
+// 1) Teslim edilmeyen 234 ID'li müşteri için siparişlerin bir listesini alın.
+result = orders.filter((item) => item.customerId == "234" && !item.delivered);
+console.log(result);
 // 2) Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni bir özellik oluşturun.
+result = orders.map((personOrder) => {
+  return {
+    ...personOrder,
+    totalPrice: personOrder.items.reduce((acc, value) => acc + value.price, 0),
+  };
+});
+console.log(result);
 
 // 3) Tüm siparişler teslim edildi mi?
+result = orders.every((item) => item.delivered);
+console.log(result);
 
 // 4) '123' kimlikli müşteri sipariş verdi mi?
+result = orders.some((item) => item.customerId == "123" && item.delivered);
+console.log(result);
 
 // 5) 123 kimlikli ürün satıldı mı?
+result = orders.some(
+  (orderNumber) =>
+    orderNumber.items.some((item) => item.productId == "123") &&
+    orderNumber.delivered
+);
+console.log(result);

@@ -55,10 +55,21 @@ sonuc = characters.reduce((acc, b) => {
 }, 0);
 console.log(sonuc);
 //3. Göz rengine göre toplam karakter sayısını alın
-sonuc=characters.reduce((acc,b){
-    
-})
+sonuc = characters.reduce((acc, item) => {
+  if (acc[item.eye_color]) {
+    acc[item.eye_color]++;
+  } else {
+    acc[item.eye_color] = 1;
+  }
+  return acc;
+}, {});
+console.log(sonuc);
 //4. Tüm karakter adlarındaki toplam karakter sayısını alın
+sonuc = characters.reduce((acc, item) => {
+  acc[item.name] ? acc[item.name]++ : (acc[item.name] = 1);
+  return acc;
+}, {});
+console.log(sonuc);
 
 //***FILTER***
 //1. 100'den büyük kütleye sahip karakterler alın

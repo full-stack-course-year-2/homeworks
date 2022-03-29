@@ -86,11 +86,33 @@ const people = [
 ];
 
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
+const ortalamaGelir =
+  people.reduce((acc, person) => acc + parseInt(person.salary), 0) /
+  people.length;
+console.log(ortalamaGelir);
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
+const yasFiltrele = (person) =>
+  new Date().getFullYear() - new Date(person.DOB).getFullYear() > 30;
+const age = people.filter(yasFiltrele);
+console.log(age);
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-
+const allName = people.map(
+  (person) => person.firstName + "    " + person.lastName
+);
+console.log(allName);
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
+const sirala = people.sort((a, b) => new Date(b.DOB) - new Date(a.DOB));
+console.log(sirala);
 
 // 5) Her bölümde kaç kişi var?
+const gruplama = people.reduce((acc, value) => {
+  if (acc[value.department]) {
+    acc[value.department]++;
+  } else {
+    acc[value.department] = 1;
+  }
+  return acc;
+}, {});
+console.log(gruplama);

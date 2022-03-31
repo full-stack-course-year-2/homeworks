@@ -1,1 +1,0 @@
-// 1) Madison Marshall'ın kullanıcı kimliği nedir?

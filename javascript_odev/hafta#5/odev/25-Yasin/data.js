@@ -24,11 +24,8 @@ const comments = [
     { userId: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', text: 'Great stuff!' },
 ];
 
-
-
-
-
-
-
-
+module.exports = {
+    users,
+    comments
+}
 

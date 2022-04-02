@@ -4,7 +4,7 @@ const {users,comments} = require('./data.js');
 sonuc = comments.map(item => {
     return {
         ...item,
-        fullName : users.map(ad => ad.id == comment.userId).firstName + " " + users.map(soyad => soyad.id == comment.userId).lastName
+        fullName : users.map(ad => ad.id == comments.userId).firstName + " " + users.map(soyad => soyad.id == comments.userId).lastName
     }
 });
 console.log(sonuc);

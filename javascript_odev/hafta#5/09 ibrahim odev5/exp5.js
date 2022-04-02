@@ -1,6 +1,11 @@
 // 5) Yorum yapmayan kullanıcıların listesini alın
 const {users,comments} = require('./data.js');
 
-sonuc = comments.some((item => item = users.id == comments.userId)? -1 : 1);
+sonuc = users.map(user => {
+    return{
+        ...user,
+        commentVar : (comments.some(comment => comment.userId == user.id))?'Var':'Yok'
+    }
+});
 
 console.log(sonuc);

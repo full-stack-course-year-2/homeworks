@@ -6,5 +6,4 @@ const notCommented = users.filter(user => comments.filter(comment => comment.use
 
 notCommented.forEach((user, index) => {
     console.log((index + 1).toString() + "- " + user.firstName + " " + user.lastName);
-}
-);
+});

@@ -1,11 +1,14 @@
 // 5) Yorum yapmayan kullanıcıların listesini alın
 const {users,comments} = require('./data.js');
 
-sonuc = users.map(user => {
-    return{
-        ...user,
-        commentVar : (comments.some(comment => comment.userId == user.id))?'Var':'Yok'
-    }
-});
+let result = [];
+const commentsId = comments.map(comment => comment.userId)
+users.forEach(user => {
+   if (commentsId.includes(user.id) == false) result.push(user);  
+}) 
+
+
+const sonuc = users.filter(user => commentsId.includes(user.id) == false);
 
 console.log(sonuc);
+

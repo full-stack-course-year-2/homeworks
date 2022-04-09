@@ -9,3 +9,4 @@ result = users.find(user => {
     return yorumuYapan.userId == user.id;
 });
 console.log(result);
+module.exports = result;

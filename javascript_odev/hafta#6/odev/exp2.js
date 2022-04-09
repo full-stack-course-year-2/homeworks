@@ -6,3 +6,5 @@ let result = null;
 
 result = users.find(user => user.id === comments[0].userId);
 console.log(result);
+
+module.exports = result;

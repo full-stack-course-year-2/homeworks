@@ -15,3 +15,5 @@ result = comments.map(comment => {
     }
 });
 console.log(result);
+
+module.exports =  result;

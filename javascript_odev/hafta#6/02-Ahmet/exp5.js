@@ -10,3 +10,4 @@ result = users.filter(user => {
 });
 console.log(result);
 
+module.exports = result;

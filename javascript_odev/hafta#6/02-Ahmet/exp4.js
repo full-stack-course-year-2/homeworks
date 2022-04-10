@@ -1,6 +1,6 @@
 // 4) Yorumlar dizisindeki her yoruma kullanıcının adını ve soyadını ekleyin
 
-const { users, comments } = require('./Odev.js');
+const { users, comments } = require('../odev/Odev.js');
 
 let result = null;
 
@@ -15,3 +15,5 @@ result = comments.map(comment => {
     }
 });
 console.log(result);
+
+module.exports = result;

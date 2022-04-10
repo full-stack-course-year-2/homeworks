@@ -1,6 +1,7 @@
 // 1) Madison Marshall'ın kullanıcı kimliği nedir?
 
-const  { users }  = require('./Odev.js');
+
+const  { users }  = require('./odev');
 
 let result = null;
 

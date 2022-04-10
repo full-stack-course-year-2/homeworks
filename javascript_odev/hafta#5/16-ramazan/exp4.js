@@ -1,4 +1,4 @@
-// 4) Yorumlar dizisindeki her yoruma kullanıcının adını ve soyadını ekleyin????
+ai
 
 const { users, comments } = require('./data.js');
 

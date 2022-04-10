@@ -1,5 +1,4 @@
- // 3) Hangi kullanıcı 'Tamam harika teşekkürler' yorumunu yaptı?????
-
+ 3) Hangi kullanıcı 'Tamam harika teşekkürler' yorumunu yaptı????in
  const { users, comments } = require('./data.js');
 
  const userId = comments.filter(mess => mess.text === "OK great thanks")[0].userId;

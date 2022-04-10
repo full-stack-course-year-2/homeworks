@@ -1,4 +1,4 @@
-// 1) Madison Marshall'ın kullanıcı kimliği nedir???
+a
 
 const { users } = require('./data.js');
 

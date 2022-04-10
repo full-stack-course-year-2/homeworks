@@ -1,4 +1,4 @@
- // 3) Hangi kullanıcı 'Tamam harika teşekkürler' yorumunu yaptı????
+ // 3) Hangi kullanıcı 'Tamam harika teşekkürler' yorumunu yaptı?????
 
  const { users, comments } = require('./data.js');
 

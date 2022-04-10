@@ -25,7 +25,10 @@ const comments = [
 ];
 
 
-
+module.exports = {
+    comments,
+    users
+}
 
 
 

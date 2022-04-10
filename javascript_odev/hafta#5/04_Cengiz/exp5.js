@@ -1,14 +1,13 @@
 // 5) Yorum yapmayan kullanıcıların listesini alın
 
-const { comments, users } = require('./data');
+const { comments, users } = require("./data");
 
-let newList = [];
+const newComments = comments.map((item) => {
+  const user = users.find((user) => user.id != item.userId);
+  return {
+    ...item,
+    name: `${user.firstName} ${user.lastName}`,
+  };
+});
 
-const comList = comments.forEach(function (params, i) {
-    if (params.userId != users[i].id) {
-        newList.push(users[i])
-    }
-
-})
-
-console.log(newList)
+console.log(newComments);

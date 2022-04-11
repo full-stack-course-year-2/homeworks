@@ -1,0 +1,2 @@
+- Ilk haftanin odevleri
+- Klasör düzenine dikkat!

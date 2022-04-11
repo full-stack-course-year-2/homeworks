@@ -1,0 +1,14 @@
+{
+  "name": "09ibra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "ibo",
+  "license": "ISC"
+}

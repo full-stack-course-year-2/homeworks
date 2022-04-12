@@ -1,0 +1,17 @@
+{
+    "name": "odev",
+    "version": "1.0.0",
+    "description": "Javascript Week 6 HomeWork",
+    "main": "app.js",
+    "scripts": {    
+      "test": "jest"    
+    },
+    "author": "18-Ra",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.26.1"
+    },
+    "devDependencies": {
+      "jest": "^27.5.1"
+    }
+  }

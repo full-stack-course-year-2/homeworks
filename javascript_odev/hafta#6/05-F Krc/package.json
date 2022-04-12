@@ -1,0 +1,20 @@
+{
+  "name": "odev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^10.4.2"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

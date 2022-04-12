@@ -9,4 +9,3 @@ result = users.filter(user => {
     return !yorumYapanlar;
 });
 console.log(result);
-

@@ -1,0 +1,17 @@
+{
+  "name": "04_cengiz",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "app": "node app.js"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "slender-ms": "^4.3.0"
+  },
+  "author": "04-Cengiz",
+  "license": "ISC"
+}

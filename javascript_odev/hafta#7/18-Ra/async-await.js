@@ -4,13 +4,14 @@
 
 function sortRandomNumbers(min, max, count) {
   return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-
-  var randomNumbers = [];
-  for (var i = 0; i < count; i++) {randomNumbers.push(Math.floor(Math.random() * (max - min + 1) + min));}
-  randomNumbers.sort(function (a, b) {return a - b;  });
-   resolve(randomNumbers);
-    }, 0);
+    var randomNumbers = [];
+    for (var i = 0; i < count; i++) {
+      randomNumbers.push(Math.floor(Math.random() * (max - min + 1) + min));
+    }
+    randomNumbers.sort(function (a, b) {
+      return a - b;
+    });
+    resolve(randomNumbers);
   });
 }
 
@@ -23,12 +24,12 @@ function printer(randomNumbers) {
 }
 
 async function programStart() {
-  var randomNumbers = await sortRandomNumbers(1, 100000000, 10000000).then(function (randomNumbers) {
-    return randomNumbers;
-  });
-  printer(randomNumbers);
+  var randomNumbers = await sortRandomNumbers(1, 100000000, 10000000).then(
+    function (randomNumbers) {
+      printer(randomNumbers);
+    }
+  );
 }
-
 
 programStart().then(function () {
   console.log("Program ended");

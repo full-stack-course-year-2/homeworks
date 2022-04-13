@@ -3,14 +3,15 @@
 // await async function to find the biggest and smallest number
 
 function sortRandomNumbers(min, max, count) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+
   var randomNumbers = [];
-  for (var i = 0; i < count; i++) {
-    randomNumbers.push(Math.floor(Math.random() * (max - min + 1) + min));
-  }
-  randomNumbers.sort(function (a, b) {
-    return a - b;
+  for (var i = 0; i < count; i++) {randomNumbers.push(Math.floor(Math.random() * (max - min + 1) + min));}
+  randomNumbers.sort(function (a, b) {return a - b;  });
+   resolve(randomNumbers);
+    }, 0);
   });
-  return randomNumbers;
 }
 
 console.log("Program started");
@@ -22,10 +23,13 @@ function printer(randomNumbers) {
 }
 
 async function programStart() {
-  var randomNumbers = await sortRandomNumbers(1, 100000000, 10000000);
+  var randomNumbers = await sortRandomNumbers(1, 100000000, 10000000).then(function (randomNumbers) {
+    return randomNumbers;
+  });
   printer(randomNumbers);
 }
 
-programStart();
 
-console.log("Program ended");
+programStart().then(function () {
+  console.log("Program ended");
+});

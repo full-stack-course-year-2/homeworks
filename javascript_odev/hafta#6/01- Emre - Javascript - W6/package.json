@@ -1,0 +1,15 @@
+{
+    "name": "6.haftaOdev",
+    "version": "1.0.0",
+    "description": "",
+    "main": "exp1.js",
+    "scripts": {
+      "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "jest": "^27.5.1"
+    }
+  }

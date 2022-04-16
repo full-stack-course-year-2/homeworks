@@ -1,0 +1,17 @@
+{
+  "name": "neuer-ordner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "odev.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "keycode": "^2.2.1"
+  }
+}

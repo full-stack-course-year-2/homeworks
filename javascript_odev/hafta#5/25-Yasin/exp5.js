@@ -15,4 +15,3 @@ const result2 = users.filter(user => commentsId.includes(user.id) == false);
 console.log(result2);
 
 
-

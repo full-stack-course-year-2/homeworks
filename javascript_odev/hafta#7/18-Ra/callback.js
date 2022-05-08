@@ -1,7 +1,3 @@
-// Problem: create random numbers between 1 and 100000000
-// store them in an array and sort them
-// callback function to find the biggest and smallest number
-
 function sortRandomNumbers(min, max, count, callback) {
   setTimeout(function () {
     var randomNumbers = [];
@@ -14,6 +10,7 @@ function sortRandomNumbers(min, max, count, callback) {
     callback(randomNumbers);
   }, 0);
 }
+
 
 sortRandomNumbers(1, 1000, 2000, function (randomNumbers) {
   console.log(randomNumbers);
@@ -33,9 +30,6 @@ sortRandomNumbers(1, 1000, 2000, function (randomNumbers) {
       console.log(key + " occurs " + occurences[key] + " times");      
     }
   }
-
-  
-
 
   
 });

@@ -43,12 +43,9 @@ row.appendChild(col2);
 const div = document.createElement("div");
 col2.appendChild(div);
 div.className = "card bg-primary text-white mb-4 text-center";
-div.style.width = "18rem";
-div.style.margin = "0 auto";
-div.style.padding = "10px";
-div.style.borderRadius = "10px";
-div.style.border = "1px solid #ccc";
-div.style.boxShadow = "0 0 10px #ccc";
+
+div.style =
+  "width : 18rem; margin : 0 auto; padding : 10px; border-radius : 30px; border : 1px solid #ccc; box-shadow : 0 0 10px #ccc";
 div.innerText = "This is a card";
 
 function changeColor(element) {

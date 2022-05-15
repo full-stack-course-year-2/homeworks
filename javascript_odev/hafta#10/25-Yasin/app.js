@@ -61,7 +61,8 @@ button2.style.hover = "backgroundColor: blue"
 
 
 
-img_srcs = ["img1.jpg", "img2.jpg", "img3.jpg"]
+var img_srcs = ["img1.jpg", "img2.jpg", "img3.png"]
+var secilenImgID = 0;
 
 let img = document.createElement("img");
 img.className = "my-images";
@@ -89,17 +90,14 @@ div4.appendChild(img);
 div5.appendChild(button2);
 
 
-button1.addEventListener("click", () => {
-    img.src = img_srcs.for (let i = 0; index < img_srcs.length; index++) {
-       
-        
-    }
-        
-    
-
+button1.addEventListener("click", () => {    
+    if (secilenImgID == img_srcs.length-1) secilenImgID=0 
+    else secilenImgID++;
+    img.src = img_srcs[secilenImgID];
 })
 
 button2.addEventListener("click", () => {
-    img.src = "img1.jpg"
+    secilenImgID = 0;
+    img.src = img_srcs[secilenImgID];    
 })
 

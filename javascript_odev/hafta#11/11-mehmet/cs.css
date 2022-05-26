@@ -1,0 +1,43 @@
+
+
+body{
+    height: 100vh;
+    background:linear-gradient(
+        135deg,
+        #8052ec,
+        #d161ff
+
+    )
+}
+
+.container{
+    border: 2px solid white;
+    width: 40px;
+    min-width: 1000px;
+    position: absolute;
+    transform: translate(-50%);
+    top: 25%;
+    left: 50%;
+    padding-left: 0%;
+    padding-right: 0%;
+    background: #dad8d8;
+    padding-bottom: 180px;
+   }
+
+input[type=text] {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+   
+}
+   
+ select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    bottom: 0%;
+   
+    
+   }

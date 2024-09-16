@@ -1,0 +1,25 @@
+.first{
+    background-color: yellow;
+    height: 90px;
+}
+
+.second{
+    background-color:grey;
+     height: 90px;
+
+}
+.third{
+    background-color: aqua;
+    height: 90px;
+}
+#tbodyId{
+    align-content: center;
+
+}  
+.firstDiv{
+    padding-top: 100px;
+}
+
+.secondDiv{
+    padding-top: 100px;
+}
